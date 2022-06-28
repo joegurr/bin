@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+
+cmd = input("What is the command you're wanting to save? ").strip()
+name = input("Enter a memorable name for this command: ").strip()
+
+with open("/home/joe/bin/commands.csv", "a") as f:
+    f.write(f"{name},{cmd}\n")

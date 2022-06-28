@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+search = input("What are you looking for? ").strip()
+
+matches = []
+
+with open("/home/joe/bin/commands.csv", "r") as f:
+    for _, line in enumerate(f):
+        row = line.split(",")
+        if search in line:
+            matches.append(row)
+
+if matches:
+    print("Did you mean:")
+    for m in matches:
+        print(f"{m[0]}\n{m[1].strip()}")
+else:
+    print("I don't have any matches for that search sorry!")
