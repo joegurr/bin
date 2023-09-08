@@ -13,7 +13,7 @@ DATE="$(date --iso-8601=date)"
 DATETIME="$(date --iso-8601=seconds)"
 AUTHOR="joegurr"
 
-BASE="$HOME"/documents/notes
+BASE="$HOME"/Documents/notes
 # WEBROOT="$HOME"/public_html/notes
 
 mkdir -p "$BASE"
@@ -40,3 +40,4 @@ fi
 
 vim "$DAILY"
 # has? pandoc && pandoc -s -f markdown -t html5 -o "$DAILY_HTML" "$DAILY" || :
+
