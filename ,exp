@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+BASE="$HOME"/code/experiments
+
+DATE="$(date --iso-8601=date)"
+
+EXP_DIR="$BASE"/"$DATE"_"$1"
+
+mkdir -p $EXP_DIR
+
+echo "cd $EXP_DIR"
+

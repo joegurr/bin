@@ -25,6 +25,7 @@ DAILY="$BASE"/"$DATE".md
 # has?() {
 #     command -v "$@" &> /dev/null
 # }
+
 insert() {
     echo "$@" >> "$DAILY"
 }
