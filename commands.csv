@@ -4,3 +4,4 @@ pandoc,pandoc -s -f markdown -t html5 -o [OUTPUT_FILE_PATH] [INPUT_FILE_PATH]
 docker remove containers,docker container rm $(docker container ls -aq)
 docker remove images,docker image rm $(docker image ls -aq)
 docker build logs,docker build --no-cache --progress=plain -t "tag" . 2>&1 | tee build.log
+docker nix,docker run -it nixos/nix

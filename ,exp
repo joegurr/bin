@@ -10,3 +10,4 @@ mkdir -p $EXP_DIR
 
 echo "cd $EXP_DIR"
 
+echo "python -m venv .venv; . .venv/bin/activate; pip install ipykernel pandas pyarrow;"
