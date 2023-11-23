@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+import csv
+
+books = list(csv.DictReader(open("/home/joe/bin/bookmarks.csv")))
+
+for i, book in enumerate(books):
+    print(f"{i}: {book['title']}")
+
+i = int(input("Which book do you want to update? "))
+
+p = input("What page did you get up to? ")
+
+books[i]["page"] = p
+
+keys = books[0].keys()
+
+with open("/home/joe/bin/bookmarks.csv", "w", newline="") as f:
+    dict_writer = csv.DictWriter(f, book)
+    dict_writer.writeheader()
+    dict_writer.writerows(books)
